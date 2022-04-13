@@ -10,7 +10,7 @@ const forecast = (address, callback) => {
             callback('We couldnt find the city you provided. Please put another', undefined)
         } else {
             callback(undefined, {
-                message: `In ${response.body.location.name} the weather is ${response.body.current.weather_descriptions[0]}. It is currently ${response.body.current.temperature} degrees out. There is a ${response.body.current.precip}% chance of rain. The humidity is ${response.body.current.humidity}`,
+                message: `In ${response.body.location.name} the weather is ${response.body.current.weather_descriptions[0]}. It is currently ${response.body.current.temperature} degrees out. There is a ${response.body.current.precip}% chance of rain. The humidity is ${response.body.current.humidity}%`,
                 location: response.body.location.name
             })
         } 
